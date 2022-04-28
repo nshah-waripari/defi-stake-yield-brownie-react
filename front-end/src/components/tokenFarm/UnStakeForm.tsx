@@ -31,7 +31,7 @@ export const Unstake = ({token}: UnstakeFormProps) => {
     const {image, address:tokenAddress, name} = token
     const {notifications} = useNotifications()
     const balance = useStakingBalance(tokenAddress.toString())
-    console.log('balance:', balance)
+    // console.log('balance:', balance)
     const formattedBalance: number = balance ? parseFloat(formatUnits(balance.toString(), 18)) : 0
     const {send:unstakeTokensSend, state: unstakeTokenState} = useUnstakeTokens()
     

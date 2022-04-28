@@ -14,6 +14,7 @@ import { makeStyles, Snackbar, Typography } from "@material-ui/core"
 import { useEffect, useState } from "react"
 import { Alert } from "@material-ui/lab"
 import { TokenFarmContract } from "./tokenFarm"
+import { UserTotalValue } from "./tokenFarm/UserTotalValue"
 
 export type Token = {
     image: String,
@@ -103,6 +104,7 @@ export const Main = () => {
              
             <YourWallet supportedTokens={supportedTokens}/>
             <TokenFarmContract supportedTokens={supportedTokens}/>
+            {/* <UserTotalValue/> */}
             <Snackbar
                 open={showNetworkError}
                 autoHideDuration={5000}
